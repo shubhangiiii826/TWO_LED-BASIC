@@ -1,0 +1,19 @@
+#define my_led1 7 // global declaration
+#define my_led2 8 // global declaration
+void setup() { 
+Serial.begin(9600);
+pinMode(my_led1,OUTPUT);
+pinMode(my_led2,OUTPUT);
+}
+void loop() {
+  while(true){
+    digitalWrite(my_led1,HIGH);
+  digitalWrite(my_led2,HIGH);
+  Serial.println("LEDs are ON");
+  delay(1000); 
+  digitalWrite(my_led1,LOW);
+  digitalWrite(my_led2,LOW);
+  Serial.println("LEDs are OFF");
+  delay(1000); 
+  }  
+}
